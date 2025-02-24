@@ -74,3 +74,74 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 1247px) {
+  .banner {
+    height: 500px;
+
+    &__inner {
+      padding-top: 180px;
+      padding-left: 30px;
+
+      background-position: right -105px top 107px;
+      background-size: 330px;
+    }
+
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    &__subtitle {
+      font-size: 22px;
+      line-height: 26.4px;
+    }
+
+    &__content {
+      max-width: 411px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 500px;
+
+    &__inner {
+      padding-top: 298px;
+      padding-left: 0px;
+
+      background-position: center top -68px;
+      background-size: 330px;
+
+      display: flex;
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+      text-align: center;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 19.2px;
+      text-align: center;
+    }
+
+    &__content {
+      max-width: 293px;
+      grid-gap: 17px;
+      justify-items: center;
+    }
+
+    &__button {
+      width: 161px;
+      height: 33px;
+
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+  }
+}
