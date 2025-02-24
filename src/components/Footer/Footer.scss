@@ -1,20 +1,54 @@
+@keyframes rocketFly {
+  0% {
+    transform: scale(1.5) translate(0, 0);
+    opacity: 100%;
+  }
+  73% {
+    transform: scale(1) translate(500px, -500px);
+    opacity: 0%;
+  }
+  74% {
+    transform: scale(1) translate(-50000px, -50000px);
+    opacity: 0%;
+  }
+  75% {
+    transform: scale(1) translate(-500px, 500px);
+    opacity: 100%;
+  }
+}
+
+@keyframes bodyMove {
+  from {
+    transform: scale(1.5) rotate(0deg);
+  }
+  to {
+    transform: scale(1.5) rotate(-5deg);
+  }
+}
+
 .footer {
   background-color: var(--true-black);
   position: relative;
   padding-bottom: 19px;
 
   display: flex;
-  justify-content: center;
-  align-items: end;
+  align-items: center;
+  flex-direction: column;
 
   &__logo {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
     background-color: transparent;
     border: none;
     padding: 0;
+    cursor: pointer;
+
+    &--flying {
+      transform-origin: center;
+      animation: rocketFly 1s;
+    }
+
+    &--pending:hover {
+      animation: bodyMove 0.2s infinite;
+    }
   }
 
   &__text {
