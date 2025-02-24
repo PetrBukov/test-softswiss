@@ -1,0 +1,49 @@
+.offer-description {
+  position: relative;
+  display: grid;
+  gap: 17px;
+
+  margin-top: 62px;
+
+  &__toggle {
+    display: none;
+  }
+
+  &__content {
+    max-height: 144px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    display: grid;
+    gap: 24px;
+
+    p {
+      margin: 0;
+      font-family: "Lato", serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      color: var(--true-white);
+      opacity: 60%;
+    }
+  }
+
+  &__toggle:checked ~ .offer-description__content {
+    max-height: 350px;
+  }
+
+  &__button {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--acid-yellow);
+    background-color: transparent;
+    border: none;
+
+    font-family: "Lato", serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0%;
+  }
+}

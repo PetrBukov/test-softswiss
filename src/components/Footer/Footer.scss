@@ -1,0 +1,30 @@
+.footer {
+  background-color: var(--true-black);
+  position: relative;
+  padding-bottom: 19px;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  &__text {
+    font-family: "Lato", serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0px;
+
+    text-align: center;
+    color: var(--acid-yellow);
+  }
+}

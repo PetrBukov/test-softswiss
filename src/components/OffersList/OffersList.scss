@@ -1,0 +1,113 @@
+.offers-list {
+  display: grid;
+  gap: 40px;
+
+  &__grid {
+    display: grid;
+    grid-auto-rows: 350px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  &__item:first-of-type,
+  &__item:last-of-type {
+    grid-column: span 2;
+  }
+}
+
+.offer {
+  position: relative;
+  padding: 49px 0 0 35px;
+
+  color: var(--true-white);
+
+  &:first-of-type,
+  &:last-of-type {
+    padding: 36 0 0 35px;
+
+    .offer__title {
+      font-size: 74px;
+      line-height: 74px;
+      max-width: 634px;
+    }
+
+    .offer__subtitle {
+      font-size: 26px;
+      line-height: 31.2px;
+    }
+  }
+
+  &:first-of-type {
+    background: url(../../assets/space-2.jpg) no-repeat center center / cover;
+  }
+
+  &:nth-of-type(2) {
+    background: url(../../assets/space-4.jpg) no-repeat center center / 110%;
+  }
+
+  &:nth-of-type(3) {
+    background: url(../../assets/space-5.jpg) no-repeat center center / cover;
+  }
+
+  &:last-of-type {
+    background: url(../../assets/space-3.jpg) no-repeat center center / cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      -90deg,
+      rgba(0, 0, 0, 0),
+      rgba(15, 20, 32, 0.79)
+    );
+  }
+
+  &__title {
+    font-family: "Lato", serif;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 46px;
+    letter-spacing: 0px;
+    margin: 0;
+    max-width: 285px;
+  }
+
+  &__subtitle {
+    font-family: "Lato", serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 28.8px;
+    letter-spacing: 0px;
+    margin: 0;
+  }
+
+  &__button {
+    width: 191px;
+    height: 54px;
+    border: 2px solid var(--acid-yellow);
+    padding: 0;
+    background-color: transparent;
+    border-radius: 100px;
+
+    color: var(--acid-yellow);
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26.4px;
+    letter-spacing: 0px;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    gap: 22px;
+  }
+}
