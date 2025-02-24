@@ -49,10 +49,45 @@
     font-size: 18px;
 
     a {
-      color: var(--true-white);
+      --gradient-color-1: #ffffff;
+      --gradient-color-2: #ffffff;
+
+      background: linear-gradient(
+        98.25deg,
+        var(--gradient-color-1) 18.56%,
+        var(--gradient-color-2) 76.02%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+
       font-family: "Lato", serif;
       font-weight: 700;
       text-decoration: none;
+
+      &:hover {
+        --gradient-color-1: #ebff00;
+        --gradient-color-2: #ff70d9;
+      }
+    }
+
+    &:last-of-type {
+      img {
+        visibility: hidden;
+      }
+
+      background: linear-gradient(98.25deg, #ffffff 18.56%, #ffffff 76.02%);
+      -webkit-mask-image: url("../../assets/cart.svg");
+      mask-image: url("../../assets/cart.svg");
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      display: inline-block;
+      width: 24px;
+      height: 20px;
+
+      &:hover {
+        background: linear-gradient(98.25deg, #ebff00 18.56%, #ff70d9 76.02%);
+      }
     }
   }
 }

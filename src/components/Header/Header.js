@@ -9,8 +9,6 @@ import "./Header.scss";
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  console.log("isMenuOpen", isMenuOpen);
-
   return (
     <header className="header">
       <div className="header__inner">
@@ -21,7 +19,7 @@ export const Header = () => {
           className={`header__menu-button header__menu-button--${
             isMenuOpen ? "opened" : "closed"
           }`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
         >
           <img src={isMenuOpen ? close : menu} alt="logo" />
         </button>

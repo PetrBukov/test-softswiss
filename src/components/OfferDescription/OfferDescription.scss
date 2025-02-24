@@ -47,6 +47,11 @@
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0%;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 
