@@ -9,8 +9,12 @@
   justify-content: center;
   width: 100%;
 
-  height: var(--header-height);
+  height: 80px;
   background-color: var(--true-black);
+
+  &__menu-button {
+    display: none;
+  }
 
   &__inner {
     display: grid;
@@ -18,7 +22,7 @@
     grid-auto-flow: column;
 
     width: 100%;
-    max-width: 1248px;
+    max-width: var(--max-content-width);
     box-sizing: border-box;
 
     padding: 24px 91px 0px 81px;
@@ -49,6 +53,101 @@
       font-family: "Lato", serif;
       font-weight: 700;
       text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1248px) {
+  .header {
+    &__inner {
+      padding: 28px 50px 0px 30px;
+    }
+
+    &__logo {
+      img {
+        width: 71px;
+      }
+    }
+
+    &__menu-list {
+      width: 250px;
+      padding-top: 0;
+    }
+
+    &__menu-list-item:last-of-type {
+      margin-top: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 48px;
+
+    &__inner {
+      padding: 12px 20px 0px 12px;
+    }
+
+    &__menu-button {
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: var(--true-white);
+        margin: 4px 0;
+      }
+    }
+
+    &__logo {
+      img {
+        width: 71px;
+      }
+    }
+
+    &__menu {
+      position: absolute;
+      top: 48px;
+      right: 0;
+      background-color: var(--true-black);
+      width: 100%;
+      transition: max-height 0.3s ease;
+    }
+
+    &__menu-list {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 24px;
+
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-right: 27px;
+    }
+
+    &__menu {
+      overflow: hidden;
+    }
+
+    &__menu-button {
+      &--closed ~ .header__menu {
+        max-height: 0px;
+      }
+
+      &--opened ~ .header__menu {
+        max-height: 150px;
+      }
     }
   }
 }
