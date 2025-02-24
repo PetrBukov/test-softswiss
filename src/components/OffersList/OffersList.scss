@@ -8,11 +8,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-
-  &__item:first-of-type,
-  &__item:last-of-type {
-    grid-column: span 2;
-  }
 }
 
 .offer {
@@ -22,22 +17,6 @@
   overflow: hidden;
 
   color: var(--true-white);
-
-  &:first-of-type,
-  &:last-of-type {
-    padding: 36 0 0 35px;
-
-    .offer__title {
-      font-size: 74px;
-      line-height: 74px;
-      max-width: 634px;
-    }
-
-    .offer__subtitle {
-      font-size: 26px;
-      line-height: 31.2px;
-    }
-  }
 
   &:first-of-type {
     background: url(../../assets/space-2.jpg) no-repeat center center / cover;
@@ -103,6 +82,8 @@
     font-size: 22px;
     line-height: 26.4px;
     letter-spacing: 0px;
+
+    cursor: pointer;
   }
 
   &__inner {
@@ -111,5 +92,78 @@
 
     display: grid;
     gap: 22px;
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  .offer {
+    &:first-of-type,
+    &:last-of-type {
+      padding: 36 0 0 35px;
+
+      .offer__title {
+        font-size: 74px;
+        line-height: 74px;
+        max-width: 634px;
+      }
+
+      .offer__subtitle {
+        font-size: 26px;
+        line-height: 31.2px;
+      }
+    }
+
+    &:first-of-type .offer__subtitle::after {
+      display: "inline";
+      content: " - it's possible with us!";
+    }
+  }
+
+  .offers-list {
+    &__item:first-of-type,
+    &__item:last-of-type {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media screen and (max-width: 1247px) {
+  .offer {
+    padding: 107px 0 0 26px;
+
+    &__title {
+      font-size: 40px;
+      line-height: 40px;
+      max-width: 220px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+
+    &__button {
+      width: 161px;
+      height: 33px;
+
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+  }
+
+  .offers-list {
+    gap: 30px;
+
+    &__grid {
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offers-list {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
   }
 }

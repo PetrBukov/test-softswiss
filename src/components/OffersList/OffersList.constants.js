@@ -2,7 +2,7 @@ export const OFFERS_LIST = [
   {
     id: "offer-1",
     title: "Move the borders of reality!",
-    subtitle: "Go on a space adventure - it's possible with us!",
+    subtitle: "Go on a space adventure",
   },
   {
     id: "offer-2",
